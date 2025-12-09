@@ -1,107 +1,49 @@
-🚗 ESP32 Bluetooth RC Car (4-Motor Differential Drive)
-📌 Overview
+<p align="center">
+  <img src="https://img.shields.io/badge/ESP32-Bluetooth%20RC%20Car-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Motor%20Driver-L298N-red?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Control-Dabble%20App-green?style=for-the-badge" />
+</p>
 
-This project is a Bluetooth-controlled RC car built using an ESP32, an L298N motor driver, and 4 DC motors (two per side).
-It uses the Dabble GamePad module for Bluetooth control and PWM for motor speed control.
+<h1 align="center">🚗 ESP32 Bluetooth RC Car (4-Motor Differential Drive)</h1>
 
-✨ Features
+<p align="center">
+A beginner-friendly robotics project using an ESP32, L298N motor driver, PWM motor control, and Bluetooth control using the Dabble GamePad app.
+</p>
 
-Bluetooth control via Dabble App
+---
 
-4-motor drive (2 motors per side)
+## ✨ Features
+- 🚀 Bluetooth control via **Dabble App**
+- ⚙️ 4-motor drive (2 motors per side)
+- 🧭 Differential tank-style turning
+- 🎚 Smooth PWM speed control
+- 🔧 Modular motor control using `rotateMotor()`
+- 👶 Perfect for beginners learning robotics + embedded systems
 
-Differential tank-style turning
+---
 
-PWM speed control using ESP32 LEDC
+## 🌸 How Movement Works
 
-Modular motor control using rotateMotor()
+The robot does NOT control 4 motors separately —  
+It controls **two motor groups**:
 
-Beginner-friendly and easy to expand
+- **Right Side Motors (2 motors)**  
+- **Left Side Motors (2 motors)**  
 
-🌸 How Movement Works
+These two sides create differential steering (tank-style movement):
 
-The robot controls two groups of motors:
+| Movement | Right Side | Left Side |
+|----------|------------|-----------|
+| **Forward** | +Speed | +Speed |
+| **Backward** | -Speed | -Speed |
+| **Turn Left** | +Speed | -Speed |
+| **Turn Right** | -Speed | +Speed |
+| **Stop** | 0 | 0 |
 
-Right Side Motors (2 motors)
+This makes the robot simple, stable, and easy to control.
 
-Left Side Motors (2 motors)
+---
 
-Movement behavior:
+## 🔌 Wiring (ESP32 → L298N Motor Driver)
 
-Forward: right +speed, left +speed
-
-Backward: right -speed, left -speed
-
-Turn Left: right +speed, left -speed
-
-Turn Right: right -speed, left +speed
-
-Stop: both 0
-
-🔌 Wiring (ESP32 → L298N)
-Right Motors
-ENA → GPIO 25 (PWM)
-IN1 → GPIO 27
-IN2 → GPIO 26
-
-Left Motors
-ENB → GPIO 33 (PWM)
-IN3 → GPIO 14
-IN4 → GPIO 12
-
-Motors
-OUT1 & OUT2 → Right motors
-OUT3 & OUT4 → Left motors
-
-Power
-Motor Power → 7.4V Li-ion/LiPo
-ESP32 Power → USB or regulated 5V
-
-📱 Bluetooth Controls (Dabble App)
-
-Up Arrow → Forward
-
-Down Arrow → Backward
-
-Left Arrow → Spin Left
-
-Right Arrow → Spin Right
-
-💻 Code Summary
-PWM Setup:
-ledcSetup(4, 1000, 8);   // right side PWM
-ledcSetup(5, 1000, 8);   // left side PWM
-
-Motor Movement:
-rotateMotor(rightMotorSpeed, leftMotorSpeed);
-
-
-Gamepad logic assigns speeds depending on which button is pressed.
-
-🎯 What I Learned
-
-Basics of DC motor control
-
-How H-bridge motor drivers work
-
-PWM and ESP32 LEDC channels
-
-Bluetooth communication using Dabble
-
-Differential drive (tank steering)
-
-Combining hardware + software
-
-🚀 Future Improvements
-
-Smooth acceleration (PWM ramping)
-
-Joystick steering
-
-Line following
-
-Obstacle avoidance (ultrasonic)
-
-ESP32-CAM for video streaming
-
-PID-based straight driving
+### **Right Motor Group**
