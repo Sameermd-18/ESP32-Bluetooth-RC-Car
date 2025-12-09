@@ -89,44 +89,36 @@ COMMON GND between battery, driver, and ESP32 (VERY important)
 
 ---
 
-## 💻 Code Overview
 
-### PWM Setup
+---
+
+## 📱 Dabble GamePad Controls
+
+| Button | Action |
+|--------|--------|
+| ⬆️ Up | Forward |
+| ⬇️ Down | Backward |
+| ⬅️ Left | Spin Left |
+| ➡️ Right | Spin Right |
+
+---
+
+
+---
+
+## 📱 Dabble GamePad Controls
+
+| Button | Action |
+|--------|--------|
+| ⬆️ Up | Forward |
+| ⬇️ Down | Backward |
+| ⬅️ Left | Spin Left |
+| ➡️ Right | Spin Right |
+
+---
+
+## 💻 PWM Setup
 ```cpp
 ledcSetup(4, 1000, 8);  // Right side PWM
 ledcSetup(5, 1000, 8);  // Left side PWM
 
-Running Motors
-rotateMotor(rightMotorSpeed, leftMotorSpeed);
-
-GamePad Input Logic
-
-Speed values are assigned based on button presses.
-
-🎯 What I Learned
-
-How H-bridge motor drivers reverse motors
-
-Why PWM is required for speed control
-
-ESP32 LEDC PWM channels
-
-Bluetooth communication using Dabble
-
-Differential drive (tank turning)
-
-Hardware + software integration
-
-🚀 Future Improvements
-
-Smooth acceleration (PWM ramping)
-
-Joystick steering mode
-
-Ultrasonic obstacle avoidance
-
-ESP32-CAM live video streaming
-
-PID-based straight driving
-
-Encoder-based speed correction
