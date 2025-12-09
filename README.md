@@ -96,8 +96,11 @@ ESP32 → USB 5V / regulated 5V
 COMMON GND between battery, driver, ESP32
 
 🚀 Future Improvements:
+
 Smooth acceleration (PWM ramping)
+
 Joystick steering mode
+
 Ultrasonic obstacle avoidance
 ESP32-CAM live video streaming
 PID-based straight driving
