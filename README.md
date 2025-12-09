@@ -97,11 +97,14 @@ COMMON GND between battery, driver, ESP32
 
 🚀 Future Improvements:
 
-Smooth acceleration (PWM ramping)
+*Smooth acceleration (PWM ramping)
 
-Joystick steering mode
+*Joystick steering mode
 
-Ultrasonic obstacle avoidance
-ESP32-CAM live video streaming
-PID-based straight driving
-Encoder-based speed correction
+*Ultrasonic obstacle avoidance
+
+*ESP32-CAM live video streaming
+
+*PID-based straight driving
+
+*Encoder-based speed correction
