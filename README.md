@@ -96,3 +96,15 @@ COMMON GND between battery, driver, and ESP32 (VERY important)
 ledcSetup(4, 1000, 8);  // Right side PWM
 ledcSetup(5, 1000, 8);  // Left side PWM
 
+NOTE:
+Motor Power → 7.4V Li-ion / LiPo
+ESP32 → USB 5V / regulated 5V
+COMMON GND between battery, driver, ESP32
+
+🚀 Future Improvements
+Smooth acceleration (PWM ramping)
+Joystick steering mode
+Ultrasonic obstacle avoidance
+ESP32-CAM live video streaming
+PID-based straight driving
+Encoder-based speed correction
