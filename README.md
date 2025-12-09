@@ -92,7 +92,9 @@ COMMON GND between battery, driver, and ESP32 (VERY important)
 
 NOTE:
 Motor Power → 7.4V Li-ion / LiPo
+
 ESP32 → USB 5V / regulated 5V
+
 COMMON GND between battery, driver, ESP32
 
 🚀 Future Improvements:
