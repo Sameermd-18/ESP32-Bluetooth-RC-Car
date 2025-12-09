@@ -90,32 +90,6 @@ COMMON GND between battery, driver, and ESP32 (VERY important)
 ---
 
 
----
-
-## 📱 Dabble GamePad Controls
-
-| Button | Action |
-|--------|--------|
-| ⬆️ Up | Forward |
-| ⬇️ Down | Backward |
-| ⬅️ Left | Spin Left |
-| ➡️ Right | Spin Right |
-
----
-
-
----
-
-## 📱 Dabble GamePad Controls
-
-| Button | Action |
-|--------|--------|
-| ⬆️ Up | Forward |
-| ⬇️ Down | Backward |
-| ⬅️ Left | Spin Left |
-| ➡️ Right | Spin Right |
-
----
 
 ## 💻 PWM Setup
 ```cpp
