@@ -97,6 +97,7 @@ ESP32 → USB 5V / regulated 5V
 
 COMMON GND between battery, driver, ESP32
 
+
 🚀 Future Improvements:
 
 *Smooth acceleration (PWM ramping)
